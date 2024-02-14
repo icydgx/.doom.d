@@ -184,14 +184,14 @@
 ;;     (org-clock-in)))
 ;; (add-hook 'org-after-todo-state-change-hook 'my/org-clock-in-when-started)
 
-;; fix method change more better
-(defun emacs-ime-disable ()
-  (w32-set-ime-open-status nil))
+;; ;; fix method change more better
+;; (defun emacs-ime-disable ()
+;;   (w32-set-ime-open-status nil))
 
-(defun emacs-ime-enable ()
-  (w32-set-ime-open-status t))
+;; (defun emacs-ime-enable ()
+;;   (w32-set-ime-open-status t))
 
-(add-hook 'evil-insert-state-entry-hook 'emacs-ime-enable)
-(add-hook 'evil-insert-state-exit-hook 'emacs-ime-disable)
+;; (add-hook 'evil-insert-state-entry-hook 'emacs-ime-enable)
+;; (add-hook 'evil-insert-state-exit-hook 'emacs-ime-disable)
 
 (when (eq system-type 'windows-nt)  (set-next-selection-coding-system 'utf-16-le)  (set-selection-coding-system 'utf-16-le)  (set-clipboard-coding-system 'utf-16-le))
